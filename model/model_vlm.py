@@ -161,8 +161,8 @@ class MiniMindVLM(MiniMindForCausalLM):
 
         loss = None
         if labels is not None:
-            shift_logits = logits[..., :-1, :].contiguous()
-            shift_labels = labels[..., 1:].contiguous()
+            shift_logits = logits[..., :-1, :].contiguous() # logits[0:batch_size, 0:seq_length-1, 0:vocab_size].contiguous()
+            shift_labels = labels[..., 1:].contiguous() # labels[0:batch_size, 1:seq_length].contiguous()
             loss = F.cross_entropy(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1), ignore_index=-100)
 
         output = MoeCausalLMOutputWithPast(loss=loss, aux_loss=aux_loss, logits=logits, past_key_values=presents, hidden_states=hidden_states)
