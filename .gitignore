@@ -6,3 +6,17 @@ out
 website/
 docs-minimind-v/
 测试.py
+<<<<<<< HEAD
+=======
+.envrc
+.vscode/
+MiniMind2-V-PyTorch/
+MiniMind2-V/
+checkpoints/
+dataset/__pycache__/
+dataset/pretrain_data.parquet
+dataset/sft_data.parquet
+minimind-v_dataset/
+model/vision_model/clip-vit-base-patch16/
+trainer/__pycache__/
+>>>>>>> 6b49197 (wip: local vlm changes)
