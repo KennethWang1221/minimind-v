@@ -9,8 +9,8 @@ MiniMind2-V-PyTorch/
 MiniMind2-V/
 checkpoints/
 dataset/__pycache__/
-dataset/pretrain_data.parquet
-dataset/sft_data.parquet
+dataset
+dataset
 minimind-v_dataset/
 model/vision_model/clip-vit-base-patch16/
 trainer/__pycache__/
